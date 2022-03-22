@@ -1,22 +1,22 @@
 #include "main.h"
+
 /**
- * print_number - print an integer using _putchar
- * @n: character to check
- *
- * Return: void
- *
+ * print_number - prints an integer
+ * @n: tracked var
  */
+
 void print_number(int n)
 {
-unsigned int abs;
-if (n < 0)
-{
-_putchar('-');
-abs = -n;
-}
-else
-abs = n;
-if (abs / 10)
-print_number(abs / 10);
-_putchar(abs % 10 + '0');
+	unsigned int x = n;
+
+	if (n < 0)
+	{
+		_putchar(45);
+		x = -x;
+	}
+	if ((x / 10) > 0)
+	{
+		print_number(x / 10);
+	}
+	_putchar((x % 10) + 48);
 }
